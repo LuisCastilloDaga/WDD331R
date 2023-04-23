@@ -1,3 +1,13 @@
-body{
-    background-color: blue;
+:root{
+    --heading-font: 'Lora', sans-serif;
+    --content-font: Helvetica, Arial, sans-serif;
+
+    --font-light-color: #333;
+    --font-dark-color: #000000;
+    --a-normal-and-visited: #666;
+    --a-active: #DEB887;
+    --a-hover: #00ddff;
+
+    --line-color: #d0d0d0;
 }
+
