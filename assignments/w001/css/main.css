@@ -2,7 +2,7 @@
     --heading-font: 'Lora', sans-serif;
     --content-font: Helvetica, Arial, sans-serif;
 
-    --font-light-color: #333;
+    --font-body-color: #333;
     --font-dark-color: #000000;
     --a-normal-and-visited: #666;
     --a-active: #DEB887;
@@ -10,4 +10,12 @@
 
     --line-color: #d0d0d0;
 }
-
+body{
+    color: var(--font-body-color);
+    width: 60%;
+    margin: 0 auto;
+}
+a{
+    color: var(--a-normal-and-visited);
+    text-decoration: none;
+}
