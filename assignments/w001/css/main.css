@@ -11,14 +11,92 @@
     --line-color: #d0d0d0;
 }
 body{
-    color: var(--font-body-color);
-    width: 60%;
     margin: 0 auto;
+    padding: 0px 8px;
+    color: var(--font-body-color);
+    font-family: var(--content-font);   
 }
-a{
-    color: var(--a-normal-and-visited);
+a, a:visited{
     text-decoration: none;
     display: block;
     text-align: center;
-    font-size: 20px;
+    color: var(--a-normal-and-visited);
+    line-height: 2.2em;
+    font-size: 16px;
+}
+h1, h2{
+    margin: 0px;
+    font-family: var(--heading-font);
+}
+h1 a, h1 a:hover, h1 a:visited{
+    font-size: 55px;
+    font-weight: 500;
+    color: var(--font-body-color);
+    padding: 40px 15%;
+    line-height: 1.2em;
+}
+nav{
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+    text-transform: uppercase;
+}
+nav a, nav a:visited{
+    font-size: 18px;
+    font-weight: 500;
+}
+nav a:active{
+    color: var(--a-active);
+}
+nav a:hover{
+    color: var(--a-hover);
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+ul li{
+    list-style: none;
+    font-family: var(--heading-font);
+}
+main{
+    padding: 0px;
+}
+.post-date{
+    padding: 40px 10px 10px 0px;
+    font-size: 22px;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+}
+.post-content{
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+    padding: 30px 15px 15px;
+}
+h2 a{
+    font-size: 22px;
+    font-weight: 500;/* 
+    padding: 20px 15px 0px; */
+    text-align: left;
+    line-height: 1.3em;
+}
+figure{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px;
+}
+.post-content p, .post-content p>a{
+    display: inline;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+.post-content p::after{
+    content: "";
+    display: block;
+    height: 0;
+}
+article:last-child .post-content{
+    border-bottom: none;
 }

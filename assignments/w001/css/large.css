@@ -1,0 +1,37 @@
+@media(min-width: 768px){
+
+    body{
+        width: 50%;
+        min-width: 768px;
+    }
+
+    h1 a, h1 a:hover{
+        padding: 40px 0px;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+    ul li{
+        padding-left: 20px;
+    }
+    main{
+        padding-top: 20px;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 220px 1fr;
+    }
+    .post-date{
+        padding: 30px 10px 10px 0px;
+        border-right: 1px solid var(--line-color); ;
+    }
+    .post-content{
+        border-top: none;
+        padding: 30px 15px;
+    }
+}
