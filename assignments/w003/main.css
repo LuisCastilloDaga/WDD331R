@@ -95,6 +95,11 @@ article .post-content p::after {
   display: block;
   height: 0;
 }
+article .post-content figure {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
 article:last-child .post-content {
   border-bottom: none;
 }
