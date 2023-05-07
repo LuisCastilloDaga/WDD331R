@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+body {
+  padding: 0 auto;
+  margin: 0px 8px;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  color: #666;
+  line-height: 2.2em;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 0px;
+  font-family: "Lora", sans-serif;
+}
+h1 a, h1 a:hover, h1 a:visited {
+  font-size: 55px;
+  font-weight: 500;
+  color: #333;
+  padding: 40px 15%;
+  line-height: 1.2em;
+}
+
+h2 {
+  margin: 0px;
+  font-family: "Lora", sans-serif;
+}
+h2 a {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.3em;
+}
+
+nav {
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  text-transform: uppercase;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 500;
+}
+nav a:visited {
+  font-size: 18px;
+  font-weight: 500;
+}
+nav a:active {
+  color: #DEB887;
+}
+nav a:hover {
+  color: #00ddff;
+}
+nav ul {
+  padding: 0 0;
+  margin: 0 0;
+}
+nav ul li {
+  list-style: none;
+  font-family: "Lora", sans-serif;
+}
+
+article .post-date {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 40px 10px 10px 0px;
+  font-family: "Lora", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+}
+article .post-content {
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 30px 15px 15px;
+}
+article .post-content p {
+  display: inline;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+article .post-content p > a {
+  display: inline;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+article .post-content p::after {
+  content: "";
+  display: block;
+  height: 0;
+}
+article:last-child .post-content {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 50%;
+    min-width: 768px;
+  }
+  nav h1 a, nav h1 a:hover {
+    padding: 40px 0;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  nav ul li {
+    padding-left: 20px;
+  }
+  main {
+    padding-top: 20px;
+  }
+  main article {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+  }
+  main article .post-date {
+    padding: 30px 10px 10px 0px;
+    border-right: 1px solid #d0d0d0;
+  }
+  main article .post-content {
+    border-top: none;
+    padding: 30px 15px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
