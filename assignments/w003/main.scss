@@ -40,7 +40,7 @@ $general-border: 1px solid $line-color;
 }
 
 body{
-    @include spacing(0, auto, 0px, 8px);
+    @include spacing(0px, 8px, 0, auto);
     color: $font-body-color;
     font-family: $content-font; 
 }
