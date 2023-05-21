@@ -1,0 +1,138 @@
+@mixin size-color{
+    height: 25%;
+    width: 25%;
+    background-color: darkred;
+}
+@mixin center-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container {
+  height: 25vmin;
+  width: 25vmin;
+  background-color: teal;
+}
+.container-one {
+  padding: 1vmin;
+  .orbiting-circle {
+    @include size-color;
+    border-radius: 50%;
+    animation: orbit 3s linear infinite;
+  }
+}       
+
+.container-two {
+  @include center-container;
+  .morphing-circle {
+    @include size-color;
+    border-radius: 50%;
+    animation: morphing-circle-square 3s linear infinite;
+  }
+}
+
+.container-three{
+  @include center-container;
+  .dividing-circle{
+    height: 25%;
+    width: 12.25%;   
+    background-color: darkred;	
+  }
+  .dividing-circle__left{
+    border-radius: 50vh 0% 0% 50vh;
+    animation: dividing-circle-left 2.5s linear infinite;
+  }
+  .dividing-circle__right{	
+    border-radius: 0% 50vh 50vh 0%;
+    animation:  dividing-circle-right 2.5s linear infinite;
+  }
+}
+
+.container-four{
+  @include center-container;
+  .scaling-circle{
+    @include size-color;
+    border-radius: 50%;
+    animation: scaling-circle 3s linear infinite;
+  }
+}
+
+/* Keyframes */
+
+@keyframes orbit {
+  0% { transform: translate(0,0); }
+  5% { transform: translate(0,0); } /* don't change for 5% of the time...pause */
+  25% { transform: translate(300%,0%); } /* start moving again */
+  30% { transform: translate(300%,0%); } /* pause */
+  50% { transform: translate(300%,300%); } /* move */
+  55% { transform: translate(300%,300%); }
+  75% { transform: translate(0%,300%); }
+  80% { transform: translate(0%,300%); }
+  100% { transform: translate(0%,0%); }
+}
+
+@keyframes morphing-circle-square {
+  0% {
+    border-radius: 50%
+  }
+  25% { /*(if you don't add both red and circle here it will start changing one or the other before you are ready) */
+    border-radius: 50%;
+    background-color: darkred;
+  }
+  50% { /* now change to white square...but don't start rotating yet! */
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(0deg);
+  }
+  75% { /* stay a white square, but rotate 90deg */
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(90deg);   
+  }
+  100% { /* stay rotated at 90, but change back to a circle */
+    border-radius: 50%;
+    background-color: darkred;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes dividing-circle-left{
+    0%{ transform: translate(0,0); }
+    10%{ transform: translate(0,0); }
+    40%{ transform: translate(-50%,0); }
+    60%{ transform: translate(-50%,0); }
+    90%{ transform: translate(0,0);}
+    100%{ transform: translate(0,0);}
+}
+@keyframes dividing-circle-right{
+    0%{ transform: translate(0,0); }
+    10%{ transform: translate(0,0); }
+    40%{ transform: translate(50%,0); }
+    60%{ transform: translate(50%,0); }
+    90%{ transform: translate(0,0);}
+    100%{ transform: translate(0,0);}
+}
+
+@keyframes scaling-circle{
+    0%{transform: scale(1)}
+    2%{transform: scale(1.2)}
+    4%{transform: scale(1)}
+    25%{transform: scale(1.2)}
+    26%{transform: scale(1)}
+    28%{transform: scale(1.2)}
+    29%{transform: scale(1)}
+    100%{transform: scale(1)}
+}
